@@ -7,7 +7,7 @@ networks:
 
 services:
   mongodb:
-    image: vinodkumar9618/monogdb:v1
+    image: vinodkumar9618/mongodb:v1
     container_name: mongodb
 
   catalogue:
@@ -17,7 +17,7 @@ services:
     - mongodb
 
   redis:
-    image: redis:7.0
+    image: redis:7
     container_name: redis
   
   user:
