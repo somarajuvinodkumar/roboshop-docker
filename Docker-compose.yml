@@ -10,7 +10,7 @@ services:
    container_name: mongodb
 
   catalogue:
-    iamge: vinodkumar9618/catalogue:v1
+    image: vinodkumar9618/catalogue:v1
     container_name: catalogue
     depends_on:
     - mongodb
