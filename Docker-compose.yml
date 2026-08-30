@@ -55,12 +55,12 @@ services:
   payment:
     image: vinodkumar9618/payment:v1
     container_name: payment
-    ENVIRONMENT:
+    environment:
       CART_HOST: cart
       CART_PORT: 8080
       USER_HOST: user
       USER_PORT: 8080
-      AMQP_POST: rabbitmq
+      AMQP_HOST: rabbitmq
       AMQP_USER: roboshop
       AMQP_PASS: roboshop123
     depends_on:
