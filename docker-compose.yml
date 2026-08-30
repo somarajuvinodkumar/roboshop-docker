@@ -40,12 +40,12 @@ services:
 
   shipping:
    image: vinodkumar9618/shipping:v1
-   container_name: shippng
+   container_name: shipping
    depends_on:
    - mysql
    - cart
 
-   rabbitmq:
+  rabbitmq:
     image: rabbitmq:3
     container_name: rabbitmq
     environment:
