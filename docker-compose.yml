@@ -4,9 +4,17 @@ networks:
    driver: bridge
    name: roboshop
 
+volumes:
+  mongodb:
+  redis:
+  mysql:
+  rabbitmq:
+
 
 services:
   mongodb:
+    volumes:
+    - mongodb: /data/db   # mongodb data store in this location
     image: vinodkumar9618/mongodb:v1
     container_name: mongodb
 
@@ -17,6 +25,8 @@ services:
     - mongodb
 
   redis:
+    volumes:
+    - redis: /data
     image: redis:7
     container_name: redis
   
@@ -35,6 +45,8 @@ services:
    - redis
 
   mysql:
+   volumes:
+   - mysql: /var/lib/mysql
    image: vinodkumar9618/mysql:v1
    container_name: mysql
 
@@ -46,6 +58,8 @@ services:
    - cart
 
   rabbitmq:
+    volumes: 
+    - rabbitmq: /var/lib/rabbitmq
     image: rabbitmq:3
     container_name: rabbitmq
     environment:
