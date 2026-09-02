@@ -1,6 +1,6 @@
 
 #stage-1: build
-FROM python:3.9.23-alpine3.2 AS builder
+FROM python:3.9.23-alpine3.22 AS builder
 WORKDIR /build
 #Install build dependencies
 RUN apk add --no-cache python3-dev build-base linux-headers pcre-dev
