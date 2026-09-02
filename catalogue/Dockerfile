@@ -19,12 +19,6 @@ CMD ["node", "server.js"]
 
 
 
-
-
-
-
-
-
 # #FROM node:20
 # FROM node:20-alpine
 # WORKDIR /opt/server
